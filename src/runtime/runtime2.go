@@ -141,7 +141,7 @@ const (
 	// continues to use its P, even in _Pgcstop. Transitioning
 	// from _Prunning to _Pgcstop causes an M to release its P and
 	// park.
-	//
+	// _Prunning 和 _Pgcstop 会触发M释放P
 	// The P retains its run queue and startTheWorld will restart
 	// the scheduler on Ps with non-empty run queues.
 	_Pgcstop
